@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="keywords" content="HTML, CSS, game, tic tac toe, flags">
+        <title>
+            Tic Tac Toe - Countries
+        </title>
+        <link id="css" rel="stylesheet" type="text/css" href="/main.css">
+        <link rel="stylesheet" type="text/css" href="countries/countries.css">
+        <script src="/countries/countries.js" defer></script>
+        <script src="/components/header.js" defer></script>
+        <script src="/index.js" defer></script>
+    </head>
+    <body>
+        <my-header></my-header>
+        <main>
+            <table>
+                <tr>
+                    <td id="af" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇦🇫</p>
+                        <p class="countryName">Afghanistan</p>
+                    </td>
+                    <td id="ar" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇦🇷</p>
+                        <p class="countryName">Argentina</p>
+                    </td>
+                    <td id="at" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇦🇹</p>
+                        <p class="countryName">Austria</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="ba" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇧🇦</p>
+                        <p class="countryName">Bosnia and Herzegovina</p>
+                    </td>
+                    <td id="bg" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇧🇬</p>
+                        <p class="countryName">Bulgaria</p>
+                    </td>
+                    <td id="cm" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇨🇲</p>
+                        <p class="countryName">Cameroon</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="cn" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇨🇳</p>
+                        <p class="countryName">China</p>
+                    </td>
+                    <td id="co" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇨🇴</p>
+                        <p class="countryName">Colombia</p>
+                    </td>       
+                    <td id="hr" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇭🇷</p>
+                        <p class="countryName">Croatia</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="cz" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇨🇿</p>
+                        <p class="countryName">Czech Republic</p>
+                    </td>
+                    <td id="eg" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇪🇬</p>
+                        <p class="countryName">Egypt</p>
+                    </td>
+                    <td id="fr" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇨🇵</p>
+                        <p class="countryName">France</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="de" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇩🇪</p>
+                        <p class="countryName">Germany</p>
+                    </td>
+                    <td id="gr" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇬🇷</p>
+                        <p class="countryName">Greece</p>
+                    </td>
+                    <td id="hu" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇭🇺</p>
+                        <p class="countryName">Hungary</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="ch" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇨🇭</p>
+                        <p class="countryName">Switzerland</p>
+                    </td>
+                    <td id="gb" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇬🇧</p>
+                        <p class="countryName">United Kingdom</p>
+                    </td>
+                    <td id="us" onclick="getCountryInfo(this.id)">
+                        <p class="flag">🇺🇸</p>
+                        <p class="countryName">United States</p>
+                    </td>
+                </tr>
+            </table>
+
+            <section id="countryInfo">
+                <section id="title">
+                    <h2 id="infoTitle"></h2>
+                    <span id="infoFlag"></span>
+                </section>
+                <section id="description">
+                    Capital: <span id="capital"></span>
+                    <br />
+                    Population: <span id="population"></span>
+                </section>
+                <button id="close" onclick="closeInfo()">Close</button>
+            </section>
+        </main>
+    </body>
+</html>

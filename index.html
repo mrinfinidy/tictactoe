@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="tic tac toe" content="A CSS tic tac toe game">
+        <meta name="keywords" content="HTML, CSS, game, tic tac toe, flags">
+        <title>
+            Tic Tac Toe
+        </title>
+        <link id="css" rel="stylesheet" type="text/css" href="main.css">
+
+        <script src="components/header.js" defer></script>
+        <script src="index.js" defer></script>
+    </head>
+    <body> 
+        <my-header></my-header>
+        <main>
+            <div class="game">
+                <button id="start" onclick="start()">Start</button>
+                <div id="tokenSelection">
+                    <label id="chooseToken" for="tokens">Choose a flag Player 1: </label>
+                    <select id="tokens" name="tokens">
+                        <option value="af">Afghanistan</option>
+                        <option value="ar">Argentina</option>
+                        <option value="at">Austria</option>
+                        <option value="ba">Bosnia and Herzegovina</option>
+                        <option value="bg">Bulgaria</option>
+                        <option value="cm">Cameroon</option>
+                        <option value="cn">China</option>
+                        <option value="co">Colombia</option>
+                        <option value="hr">Croatia</option>
+                        <option value="cz">Czech Republic</option>
+                        <option value="eg">Egypt</option>
+                        <option value="fr">France</option>
+                        <option value="de">Germany</option>
+                        <option value="gr">Greece</option>
+                        <option value="hu">Hungary</option>
+                        <option value="ch">Switzerland</option>
+                        <option value="gb">UK</option>
+                        <option value="us">USA</option>
+                    </select>
+                    <button id="confirmToken" onclick="confirmToken()">Confirm</button>
+                </div>
+
+                <div class="tictactoe hide">
+                    <section>
+                        Player <span class="playerDisplay playerX">x</span>'s turn
+                    </section>
+                    <section class="gameContainer">
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                        <div class="tile"></div>
+                    </section>
+                    <section class="announce"></section>
+                    <button id="reset" onclick="reset()">Reset</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

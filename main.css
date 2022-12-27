@@ -1,0 +1,239 @@
+
+:root {
+    --primary-pink: #e94951;
+    --secondary-pink: #fad1d3;
+}
+
+body {
+    background-color: var(--secondary-pink);
+}
+
+
+/* Header */
+
+h1 {
+    color: var(--primary-pink);
+}
+
+.topnav {
+    background-color: var(--primary-pink);
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 0.3em;
+}
+
+.topnav a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 0.6em 0.5em;
+    text-decoration: none;
+    font-size: 1.2em;
+    margin: 0.1em 0;
+    border-radius: 0.3em;
+}
+
+.topnav a:hover {
+    background-color: white;
+    color: var(--primary-pink);
+}
+
+.topnav a:active {
+    background-color: #fad1d3;
+    color: var(--primary-pink);
+}
+
+.mobile-nav, .hamburger {
+    display: none;
+}
+
+/* Style for mobile devices */
+@media only screen and (max-width: 600px) {
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 99;
+        background-color: var(--primary-pink);
+        border-radius: 0.3em;
+    }
+    
+    .hamburger {
+        display: block;
+    }
+
+    .topnav {
+        display: none;
+    }
+    
+    h1 {
+        margin-left: 0.3em;
+        color: white;
+        z-index: 99;
+    }
+
+    .mobile-nav {
+        display: block;
+    }
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background-color: var(--primary-pink);
+    padding-top: 6em;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 0;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 10em;
+    margin: 0 auto 1em;
+    text-align: center;
+    padding: 0.8em 1em;
+    border-radius: 0.3em;
+    background-color: var(--secondary-pink);
+    color: var(--primary-pink);
+    text-decoration: none;
+}
+
+.mobile-nav a:hover {
+    background-color: var(white);
+    color: var(--primary-pink);
+}
+
+.hamburger {
+    position: relative;
+    margin-right: 0.3em;
+    z-index: 1;
+       
+    user-select: none;
+               
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+} 
+
+.hamburger span {
+    display: block;
+    width: 2.5em;
+    height: 0.2em;
+    margin-bottom: 0.4em;
+    position: relative;
+        
+    background-color: white;
+    border-radius: 0.5em;
+        
+    transform-origin: 0 0;
+
+    transition: 0.4s;
+}
+
+.hamburger.is-active span:nth-child(1) {
+    transform: translate(0, -0.15em) rotate(45deg);
+}
+
+.hamburger.is-active span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+    transform: translate(-0.25em, 0.3em) rotate(-45deg);
+}
+
+
+/* Main */
+/*
+.hide {
+    display: none;
+}
+*/
+#start {
+    display: block;
+    margin: 1em auto;
+    padding: 0.1em 0.3em;
+    font-size: 5em;
+    border-radius: 0.3em;
+    background-color: var(--primary-pink);
+    color: white;
+}
+
+#start:hover {
+    color: var(--secondary-pink);
+}
+
+#tokenSelection {
+    display: none;
+    margin: 1em auto;
+    color: var(--primary-pink);
+}
+
+#chooseToken {
+    font-size: 1.5em;
+}
+
+#tokens {
+    background-color: var(--primary-pink);
+    color: white;
+    font-size: 1em;
+    border-radius: 0.3em;
+}
+
+#confirmToken {
+    font-size: 1em;
+    background-color: var(--primary-pink);
+    color: white;
+    border-radius: 0.3em;
+}
+
+#confirmToken:hover {
+    color: var(--secondary-pink);
+}
+
+.tictactoe {
+    display: none;
+    font-size: 1.5em;
+    color: var(--primary-pink);
+}
+
+.gameContainer {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+    max-width: 300px;
+}
+
+.tile {
+    border: 1px solid var(--primary-pink);
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    cursor: pointer;
+}
+
+#reset {
+    font-size: 1.5em;
+    background-color: var(--primary-pink);
+    color: white;
+    border-radius: 0.3em;
+}
+
+#reset:hover {
+    color: var(--secondary-pink);
+}
