@@ -14,14 +14,14 @@ class Header extends HTMLElement {
                     <div class="topnav">
                         <a class="" href="index.html">Home</a>
                         <a class="" href="countries.html">Countries</a>
-                        <a class="" href="contact.html">Contact</a>
+                        <a class="" href="about.html">About</a>
 
                     </div>
 
                     <div class="mobile-nav">
                         <a class="" href="index.html">Home</a>
                         <a class="" href="countries.html">Countries</a>
-                        <a class="" href="contact.html">Contact</a>
+                        <a class="" href="about.html">About</a>
                     </div>
                     
                     <button class="hamburger">

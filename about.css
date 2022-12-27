@@ -1,0 +1,8 @@
+#aboutTitle {
+    color: var(--primary-pink);
+}
+
+#gameDescription {   
+    margin: 0 1em;
+    color: var(--primary-pink);
+}
