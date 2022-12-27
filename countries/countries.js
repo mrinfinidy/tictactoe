@@ -144,34 +144,34 @@ const us = {
     population: 333287557
 }
 
-const countries = new Map()
-countries.set('af', af)
-countries.set('ar', ar)
-countries.set('at', at)
-countries.set('ba', ba)
-countries.set('bg', bg)
-countries.set('cm', cm)
-countries.set('cn', cn)
-countries.set('co', co)
-countries.set('hr', hr)
-countries.set('cz', cz)
-countries.set('eg', eg)
-countries.set('fr', fr)
-countries.set('de', de)
-countries.set('gr', gr)
-countries.set('hu', hu)
-countries.set('ch', ch)
-countries.set('gb', gb)
-countries.set('us', us)
+const countryInfos = new Map()
+countryInfos.set('af', af)
+countryInfos.set('ar', ar)
+countryInfos.set('at', at)
+countryInfos.set('ba', ba)
+countryInfos.set('bg', bg)
+countryInfos.set('cm', cm)
+countryInfos.set('cn', cn)
+countryInfos.set('co', co)
+countryInfos.set('hr', hr)
+countryInfos.set('cz', cz)
+countryInfos.set('eg', eg)
+countryInfos.set('fr', fr)
+countryInfos.set('de', de)
+countryInfos.set('gr', gr)
+countryInfos.set('hu', hu)
+countryInfos.set('ch', ch)
+countryInfos.set('gb', gb)
+countryInfos.set('us', us)
 
 
 function getCountryInfo(countryCode) {
     document.getElementById('countryInfo').classList.toggle('is-active')
-    document.getElementById('infoTitle').innerHTML = countries.get(countryCode).name
-    document.getElementById('infoFlag').innerText = countries.get(countryCode).flag
+    document.getElementById('infoTitle').innerHTML = countryInfos.get(countryCode).name
+    document.getElementById('infoFlag').innerText = countryInfos.get(countryCode).flag
 
-    document.getElementById('capital').innerText = countries.get(countryCode).capital
-    document.getElementById('population').innerText = countries.get(countryCode).population
+    document.getElementById('capital').innerText = countryInfos.get(countryCode).capital
+    document.getElementById('population').innerText = countryInfos.get(countryCode).population
 }
 
 function closeInfo() {
