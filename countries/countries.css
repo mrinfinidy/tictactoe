@@ -1,3 +1,4 @@
+/* 3x3 display of all countries in the game */
 table {
     margin-top: 1em;
     text-align: center;
@@ -22,6 +23,7 @@ td:hover {
     color: var(--primary-pink);
 }
 
+/* Info card that drops down when player clicks on a country */
 #countryInfo {
     position: fixed;
     bottom: 100%;

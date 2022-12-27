@@ -5,7 +5,7 @@ const playerDisplay = document.querySelector('.playerDisplay')
 const announce = document.querySelector('.announce')
 let firstToken = ''
 
-// countries 
+// Define countries with country code and flag that a player can choose from
 const countries = new Map()
 countries.set('af', '🇦🇫')
 countries.set('ar', '🇦🇷')
@@ -26,6 +26,7 @@ countries.set('ch', '🇨🇭')
 countries.set('gb', '🇬🇧')
 countries.set('us', '🇺🇸')
 
+// Game setup
 let board = ['', '', '', '', '', '', '', '', ''] 
 const currentPlayer = {
     type: 'x',
@@ -57,6 +58,7 @@ const winningConditions = [
     [2, 4, 6]
 ]
 
+// Game Logic
 function validateResult() {
     let gameWon = false
     for (let i = 0; i < 8; i++) {
@@ -99,6 +101,7 @@ const announceState = (gameState) => {
     announce.style.display = 'hide'
 }
 
+
 const isValidMove = (tile) => {
     if (tile.innerText !== '') {
         return false
@@ -124,7 +127,6 @@ const changePlayer = () => {
 
 const playerMove = (tile, index) => {
     if (isValidMove(tile) && isGameActive) {
-        //tile.innerText = currentPlayer
         tile.innerText = currentPlayer.type === 'x' ? currentPlayer.countryX : currentPlayer.countryO
         tile.classList.add(`player${currentPlayer.type}`)
         updateBoard(index)
@@ -138,29 +140,14 @@ tiles.forEach((tile, index) => {
 })
 
 
-hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('is-active')
-    mobileNav.classList.toggle('is-active')
-})
-
+// Start game --> choose countries and then play
 function start() {
     document.getElementById('start').style.display = 'none'
     document.getElementById('tokenSelection').style.display = 'block'
 }
 
-function isCountry(country, selection) {
-    return country.name === selection
-}
-
-function getOption (select, value) {
-    let options = select.options
-    for (let i = 0; i < options.length; i++) {
-        if (options[i].value === value) {
-            return options[i]
-        }
-    }
-}
-
+// Players choose their country
+// Players 1 and 2 must choose different countries
 function confirmToken() {
     tokens = document.getElementById('tokens')
     if (currentPlayer.countryX === null) {
@@ -183,6 +170,7 @@ function confirmToken() {
     }
 }
 
+// Reset game
 function reset() {
     board = ['', '', '', '', '', '', '', '', ''] 
     isGameActive = true
@@ -208,4 +196,8 @@ function reset() {
     document.getElementById('start').style.display = 'block'
 }
 
-
+// Mobile menu
+hamburger.addEventListener('click', function() {
+    hamburger.classList.toggle('is-active')
+    mobileNav.classList.toggle('is-active')
+})

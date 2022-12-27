@@ -1,4 +1,4 @@
-
+/* Define color variables */
 :root {
     --primary-pink: #e94951;
     --secondary-pink: #fad1d3;
@@ -15,6 +15,7 @@ h1 {
     color: var(--primary-pink);
 }
 
+/* Desktop version (also for mobile if wide enough) */
 .topnav {
     background-color: var(--primary-pink);
     overflow: hidden;
@@ -155,11 +156,8 @@ h1 {
 
 
 /* Main */
-/*
-.hide {
-    display: none;
-}
-*/
+
+/* Before game start */
 #start {
     display: block;
     margin: 1em auto;
@@ -202,6 +200,7 @@ h1 {
     color: var(--secondary-pink);
 }
 
+/* Tic Tac Toe game */
 .tictactoe {
     display: none;
     font-size: 1.5em;
