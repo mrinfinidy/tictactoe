@@ -174,8 +174,11 @@ h1 {
 
 #tokenSelection {
     display: none;
-    margin: 1em auto;
     color: var(--primary-pink);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 5em;
 }
 
 #chooseToken {
@@ -205,10 +208,14 @@ h1 {
     display: none;
     font-size: 1.5em;
     color: var(--primary-pink);
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 1em;
 }
 
 .gameContainer {
-    margin: 0 auto;
+    margin: 1em auto;
     display: grid;
     grid-template-columns: 33% 33% 33%;
     grid-template-rows: 33% 33% 33%;
